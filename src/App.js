@@ -31,5 +31,4 @@ function App() {
     <Cart cart={cart} setCart={setCart} handleChange={handleChange} item_info={item_info} />
   );
 }
-
 export default App;

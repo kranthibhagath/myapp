@@ -2,18 +2,15 @@
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
-
 import TableRow from '@mui/material/TableRow';
 import Typography from '@mui/material/Typography';
-
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 import RemoveCircleOutlineIcon from '@mui/icons-material/RemoveCircleOutline';
 import { useState, useEffect } from 'react';
-
 import Link from '@mui/material/Link';
 import Button from '@mui/material/Button';
-
 import Stack from '@mui/material/Stack';
+
 function CartTabel({ cart, setCart, handleChange, handlePrice, modal, item_info, price }) {
     const [items, setitems] = useState(0);
     const handleitems = () => {
@@ -85,17 +82,13 @@ function CartTabel({ cart, setCart, handleChange, handlePrice, modal, item_info,
                                         <Typography fontWeight={700}>${ProductPrice(row.qty, row.price)}</Typography>
                                         <Button ><Link fontWeight={700} onClick={() => handleRemove(row.id)} sx={{ color: 'red' }}>Remove</Link></Button>
                                     </TableCell>
-
                                 </>
-
                             )}
-
                     </TableRow>
                 ))}
                 {!modal ? (<TableRow>
                     <TableCell colSpan={2} />
                     <TableCell >
-                        {/* <Avatar variant="rounded" src="avatar1.jpg" /> */}
                         <Stack align="right" spacing={0.5}>
                             <Typography fontWeight={700}>Sub-Total</Typography>
                             <Typography variant="body2" color="text.secondary">
